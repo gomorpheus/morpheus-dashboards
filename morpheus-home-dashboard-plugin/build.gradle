@@ -20,7 +20,7 @@ apply plugin:'asset-pipeline'
 
 group = 'com.morpheusdata'
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
-version '1.0.3'
+version '1.0.4'
 
 sourceCompatibility = '1.11'
 targetCompatibility = '1.11'

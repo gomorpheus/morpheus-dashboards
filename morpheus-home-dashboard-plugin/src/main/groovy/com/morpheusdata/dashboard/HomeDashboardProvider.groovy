@@ -77,7 +77,8 @@ class HomeDashboardProvider extends AbstractDashboardProvider {
 			instances:[
 				'dashboard-item-instance-count', 
 				'dashboard-item-instance-count-cloud', 
-				'dashboard-item-instance-count-cloud-day'
+				// 'dashboard-item-instance-count-cloud-day'
+				'dashboard-item-log-count'
 			],
 			workloads:[
 				'dashboard-item-group-workload-count',
@@ -87,10 +88,10 @@ class HomeDashboardProvider extends AbstractDashboardProvider {
 			//clouds:[
 				//'dashboard-item-cloud-count-type',
 			//],
-			logs:[
-				'dashboard-item-log-count',
-				'dashboard-item-log-trends'
-			],
+			// logs:[
+			// 	'dashboard-item-log-count',
+			// 	'dashboard-item-log-trends'
+			// ],
 			jobs:[
 				'dashboard-item-job-execution-stats',
 				'dashboard-item-backup-stats',
