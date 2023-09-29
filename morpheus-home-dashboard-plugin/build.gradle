@@ -79,7 +79,7 @@ jar {
 			'Morpheus-Color': '#ffffff',
 			'Morpheus-Labels': 'Dashboard',
 			'Morpheus-Repo': 'https://github.com/gomorpheus/morpheus-dashboard-plugin',
-			'Morpheus-Min-Appliance-Version': "6.0.0"
+			'Morpheus-Min-Appliance-Version': "6.3.0"
 		)
 	}
 }
