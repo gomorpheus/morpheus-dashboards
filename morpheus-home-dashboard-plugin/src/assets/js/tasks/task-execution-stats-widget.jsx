@@ -106,9 +106,9 @@ class TaskExecutionStatsWidget extends React.Component {
   render() {
     //setup
     var pillList = [
-      {name:'1 Day', value:1},
-      {name:'1 Week', value:7},
-      {name:'1 Month', value:30}
+      {name:$L({code:'gomorpheus.time.oneDay'}), value:1},
+      {name:$L({code:'gomorpheus.time.oneWeek'}), value:7},
+      {name:$L({code:'gomorpheus.time.oneMonth'}), value:30}
     ];
     //data
     var chartData = this.state.loaded == true && this.state.data ? this.state.data.chartData : {};

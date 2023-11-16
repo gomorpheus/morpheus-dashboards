@@ -119,7 +119,7 @@ class LogCountWidget extends React.Component {
     //render
     return (
       <Widget>
-        <WidgetHeader icon="/assets/dashboard.svg#logs" title="Log History" link="/monitoring/logs"/>
+        <WidgetHeader icon="/assets/dashboard.svg#logs" title="Log History" titleCode="gomorpheus.widget.title.logHistory" link="/monitoring/logs"/>
         <div className="log-view">
           <LogChart logData={this.state.data} loaded={this.state.loaded} config={this.state.chartConfig}/>
         </div>

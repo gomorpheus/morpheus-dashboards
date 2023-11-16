@@ -82,9 +82,9 @@ class UserFavoritesWidget extends React.Component {
           <table className="widget-table">
             <thead>
               <tr>
-                <th className="col-lg">Instance</th>
-                <th>Type</th>
-                <th className="col-lg">Address</th>
+                <th className="col-lg">{$L({code:'gomorpheus.label.instance'})}</th>
+                <th>{$L({code:'gomorpheus.label.type'})}</th>
+                <th className="col-lg">{$L({code:'gomorpheus.label.address'})}</th>
               </tr>
             </thead>
             <tbody>

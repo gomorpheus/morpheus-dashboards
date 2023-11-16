@@ -112,9 +112,9 @@ class CurrentAlarmsWidget extends React.Component {
             <table className="widget-table">
               <thead>
                 <tr>
-                  <th className="col-lg">Resource</th>
-                  <th className="col-lg">Info</th>
-                  <th>Duration</th>
+                  <th className="col-lg">{$L({code:'gomorpheus.label.resource'})}</th>
+                  <th className="col-lg">{$L({code:'gomorpheus.label.info'})}</th>
+                  <th>{$L({code:'gomorpheus.label.duration'})}</th>
                 </tr>
               </thead>
               <tbody>

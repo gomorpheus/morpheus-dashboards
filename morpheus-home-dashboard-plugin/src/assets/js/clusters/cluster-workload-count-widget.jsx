@@ -106,7 +106,7 @@ class ClusterWorkloadCountWidget extends React.Component {
     //render
     return(
       <Widget widgetClass="chart-legend-right">
-        <WidgetHeader title="Cluster Workloads" icon="/assets/infrastructure/clusters.svg#Layer_1" title="Cluster Workloads" link="/infrastructure/clusters"/>
+        <WidgetHeader title="Cluster Workloads" titleCode="gomorpheus.widget.title.clusterWorkloads" icon="/assets/infrastructure/clusters.svg#Layer_1" title="Cluster Workloads" link="/infrastructure/clusters"/>
         <DonutChartWidget data={this.state.data} config={this.state.chartConfig} onLegendClick={this.onLegendClick}/>
       </Widget>
     );

@@ -109,7 +109,7 @@ class GroupWorkloadCountWidget extends React.Component {
     //render
     return(
       <Widget widgetClass="chart-legend-right">
-        <WidgetHeader icon="/assets/infrastructure/sites.svg#Layer_1" title="Group Workloads" link="/infrastructure/groups"/>
+        <WidgetHeader icon="/assets/infrastructure/sites.svg#Layer_1" title="Group Workloads" titleCode="gomorpheus.widget.title.groupWorkloads" link="/infrastructure/groups"/>
         <DonutChartWidget tooltip="morpheus-value" data={this.state.data} config={this.state.chartConfig}/>
       </Widget>
     );
