@@ -3,11 +3,15 @@ buildscript {
 		mavenLocal()
 		mavenCentral()
 		maven { url "https://plugins.gradle.org/m2/" }	
+		maven { url "https://nexus.bertramlabs.com/content/repositories/snapshots" }
+		maven { url "https://nexus.bertramlabs.com/content/repositories/releases" }
+		maven { url "https://nexus.bertramlabs.com/content/repositories/publicReleases" }
 	}
 	dependencies {
 		classpath "com.github.jengelman.gradle.plugins:shadow:6.0.0"
 		classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineVersion"
 		classpath "com.bertramlabs.plugins:jsx-asset-pipeline:$assetPipelineVersion"
+        classpath "com.morpheusdata:morpheus-plugin-gradle:$morphPluginGradleVersion"
 	}
 }
 
@@ -17,6 +21,7 @@ apply plugin:'groovy'
 apply plugin:'idea'
 apply plugin:'com.github.johnrengelman.shadow'
 apply plugin:'asset-pipeline'
+apply plugin: 'com.morpheusdata.morpheus-plugin-gradle'
 
 group = 'com.morpheusdata'
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")

@@ -71,30 +71,30 @@ class EnvironmentCountWidget extends React.Component {
     //render
     return (
       <Widget>
-        <WidgetHeader icon="/assets/dashboard.svg#provisioning" title="Environment"/>
+        <WidgetHeader icon="/assets/dashboard.svg#provisioning" title="Environment" titleCode="gomorpheus.widget.title.environment" />
         <div className={'dashboard-widget-content' + (showChart ? '' : ' hidden')}>
           <div className="row">
-            <div className="col-sm-2 dashboard-widget-count count-rows">
+            <div className="col-xs-2 dashboard-widget-count count-rows">
               <span className="count-value">{countData.groups}</span>
               <span className="count-label">{Morpheus.utils.message('gomorpheus.label.groups')}</span>
             </div>
-            <div className="col-sm-2 dashboard-widget-count count-rows">
+            <div className="col-xs-2 dashboard-widget-count count-rows">
               <span className="count-value">{countData.clouds}</span>
               <span className="count-label">{Morpheus.utils.message('gomorpheus.label.clouds')}</span>
             </div>
-            <div className="col-sm-2 dashboard-widget-count count-rows">
+            <div className="col-xs-2 dashboard-widget-count count-rows">
               <span className="count-value">{countData.clusters}</span>
               <span className="count-label">{Morpheus.utils.message('gomorpheus.label.clusters')}</span>
             </div>
-            <div className="col-sm-2 dashboard-widget-count count-rows">
+            <div className="col-xs-2 dashboard-widget-count count-rows">
               <span className="count-value">{countData.apps}</span>
               <span className="count-label">{Morpheus.utils.message('gomorpheus.label.apps')}</span>
             </div>
-            <div className="col-sm-2 dashboard-widget-count count-rows">
+            <div className="col-xs-2 dashboard-widget-count count-rows">
               <span className="count-value">{countData.instances}</span>
               <span className="count-label">{Morpheus.utils.message('gomorpheus.label.instances')}</span>
             </div>
-            <div className="col-sm-2 dashboard-widget-count count-rows">
+            <div className="col-xs-2 dashboard-widget-count count-rows">
               <span className="count-value">{countData.users}</span>
               <span className="count-label">{Morpheus.utils.message('gomorpheus.label.users')}</span>
             </div>

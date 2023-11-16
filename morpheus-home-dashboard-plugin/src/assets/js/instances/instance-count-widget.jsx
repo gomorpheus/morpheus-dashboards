@@ -100,11 +100,11 @@ class InstanceCountWidget extends React.Component {
     //render it
     return (
       <Widget>
-        <WidgetHeader icon="/assets/dashboard.svg#provisioning" title="Instance Status" link="/provisioning/instances"/>
+        <WidgetHeader icon="/assets/dashboard.svg#provisioning" title="Instance Status" titleCode="gomorpheus.widget.title.instanceStatus" link="/provisioning/instances"/>
         <div className="dashboard-widget-content">
           <div className={'dashboard-widget-chart-count' + (showChart ? '' : ' hidden')}>
             <span className='count-value'>{countValue}</span>
-            <span className='count-label'>instances</span>
+            <span className='count-label'>{$L({code:'gomorpheus.label.instances'})}</span>
           </div>
           <div className="dashboard-widget-chart-body">
             <PieChartWidget data={this.state.data} config={this.state.chartConfig}/>

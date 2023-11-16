@@ -95,7 +95,7 @@ class CloudWorkloadCountWidget extends React.Component {
     //render
     return(
       <Widget widgetClass="chart-legend-right">
-        <WidgetHeader icon="/assets/infrastructure/clouds.svg#Layer_1" title="Cloud Workloads" link="/infrastructure/clouds"/>
+        <WidgetHeader icon="/assets/infrastructure/clouds.svg#Layer_1" title="Cloud Workloads" titleCode="gomorpheus.widget.title.cloudWorkloads" link="/infrastructure/clouds"/>
         <DonutChartWidget tooltip="morpheus-value" data={this.state.data} config={this.state.chartConfig}/>
       </Widget>
     );

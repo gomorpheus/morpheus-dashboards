@@ -72,7 +72,7 @@ class RecentActivityWidget extends React.Component {
     //render
     return (
       <Widget>
-        <WidgetHeader icon="/assets/dashboard.svg#logs" title="Activity" link="/operations/activity"/>
+        <WidgetHeader icon="/assets/dashboard.svg#logs" title="Activity" titleCode="gomorpheus.label.activity" link="/operations/activity"/>
         <div className="dashboard-widget-content">
           <table className={'widget-table' + (showTable ? '' : ' hidden')}>
             <tbody>

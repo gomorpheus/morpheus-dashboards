@@ -106,11 +106,11 @@ class InstanceCountCloudWidget extends React.Component {
     //render
     return (
       <Widget>
-        <WidgetHeader icon="/assets/dashboard.svg#provisioning" title="Instances by Cloud" link="/provisioning/instances"/>
+        <WidgetHeader icon="/assets/dashboard.svg#provisioning" title="Instances by Cloud" titleCode="gomorpheus.widget.title.instancesByCloud" link="/provisioning/instances"/>
         <div className="dashboard-widget-content">
           <div className={'dashboard-widget-chart-count' + (showChart ? '' : ' hidden')}>
             <span className='count-value'>{countValue}</span>
-            <span className='count-label'>clouds</span>
+            <span className='count-label'>{$L({code:'gomorpheus.label.clouds'})}</span>
           </div>
           <div className="dashboard-widget-chart-body">
             <PieChartWidget data={this.state.data} config={this.state.chartConfig}/>
