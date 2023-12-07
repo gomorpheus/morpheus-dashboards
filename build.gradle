@@ -21,3 +21,9 @@ apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'com.github.johnrengelman.shadow'
 
+clean.doFirst {
+    delete "${rootDir}/plugins/*.jar"
+    delete fileTree("${rootDir}/plugins") {
+        include '*.jar'
+    }
+}
