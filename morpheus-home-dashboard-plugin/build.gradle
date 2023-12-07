@@ -80,7 +80,7 @@ jar {
 			'Morpheus-Logo-Dark': 'assets/morpheus.svg',
 			'Morpheus-Color': '#ffffff',
 			'Morpheus-Labels': 'Dashboard',
-			'Morpheus-Repo': 'https://github.com/gomorpheus/morpheus-dashboard-plugin',
+			'Morpheus-Repo': 'https://github.com/gomorpheus/morpheus-dashboards',
 			'Morpheus-Min-Appliance-Version': "6.0.0"
 		)
 	}
