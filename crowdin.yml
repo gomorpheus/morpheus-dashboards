@@ -1,0 +1,29 @@
+# @author: Chris Taylor
+# This file is used alongside crowdin CLI to sync localisation updates
+# Use: 
+# crowdin upload sources //upload messages.properties updates. Crowdin workflow will pre-translate what it can. Translators will need to approve/change pre-translations before they can be used by Morpheus
+# crowdin download //Download all available translations for all available languages. 
+
+"project_id" : "446824"
+"api_token_env" : "CROWDIN_PERSONAL_TOKEN"
+"base_path" : "."
+"base_url" : "https://api.crowdin.com"
+
+"preserve_hierarchy": true
+
+files: [
+ {
+  "source" : "morpheus-home-dashboard-plugin/src/main/resources/i18n/messages.properties",
+  "dest" : "/dashboard-plugins/home-dashboard.properties",
+  "translation" : "morpheus-home-dashboard-plugin/src/main/resources/i18n/messages_%two_letters_code%.properties",
+  "translation_replace": {
+      "_zu": "_zy" #need to change the translation context language code to a unused language code
+  },
+  "export_only_approved" : true,
+  "skip_untranslated_files" : false,
+  "skip_untranslated_strings" : true,
+  "escape_quotes" : 0,
+  "escape_special_characters": 0,
+ }
+]
+
