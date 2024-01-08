@@ -71,7 +71,7 @@ class EnvironmentCountWidget extends React.Component {
     //render
     return (
       <Widget>
-        <WidgetHeader icon="/assets/dashboard.svg#provisioning" title="Environment" titleCode="gomorpheus.widget.title.environment" />
+        <WidgetHeader icon="/assets/dashboard.svg#provisioning" title={Morpheus.utils.message('gomorpheus.widget.title.environment')} titleCode="gomorpheus.widget.title.environment" />
         <div className={'dashboard-widget-content' + (showChart ? '' : ' hidden')}>
           <div className="row">
             <div className="col-xs-2 dashboard-widget-count count-rows">
