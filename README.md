@@ -23,3 +23,18 @@ For example, to build the `morpheus-home-dashboard` plugin:
 ```bash
 gradlew morpheus-home-dashboard:shadowJar
 ```
+
+
+# Morpheus Standard Dashboards
+
+This plugin provides a set of standard dashboards for the Morpheus UI.
+
+## Installing
+
+First check to make sure the version of Morpheus installed is above or equal to the minimum required version of this plugin and then download the plugin file above.
+Once the file is downloaded, browse to the Administration -> Integrations -> Plugins section of the Morpheus appliance. Click the Upload File button to select your plugin and upload it.
+The plugin should now be loaded into the environment for use.
+
+## Configuring
+
+There are no configurations for this plugin. Once the plugin is loaded in the environment, the standard dashboards will be available in the Morpheus UI.
