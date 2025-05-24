@@ -67,6 +67,7 @@ class CloudListDashboardProvider extends AbstractDashboardProvider {
 		//add items
 		def dashboardItemGroups = [
 			main:[
+				'dashboard-item-group-workload-count',
 				'dashboard-item-cloud-count-type',
 				'dashboard-item-cloud-workload-count'
 			]

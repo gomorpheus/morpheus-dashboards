@@ -80,11 +80,12 @@ class HomeDashboardProvider extends AbstractDashboardProvider {
 				// 'dashboard-item-instance-count-cloud-day'
 				'dashboard-item-log-count'
 			],
-			workloads:[
-				'dashboard-item-group-workload-count',
-				'dashboard-item-cloud-workload-count',
-				'dashboard-item-cluster-workload-count'
-			],
+			// moved to CloudListDashboardProvider
+			// workloads:[
+			// 	'dashboard-item-group-workload-count',
+			// 	'dashboard-item-cloud-workload-count',
+			// 	'dashboard-item-cluster-workload-count'
+			// ],
 			//clouds:[
 				//'dashboard-item-cloud-count-type',
 			//],
