@@ -53,6 +53,7 @@ class EnvironmentCountWidget extends React.Component {
     newState.data.apps = results.apps ? results.apps : 0;
     newState.data.resources = results.resources ? results.resources : 0;
     newState.data.users = results.users ? results.users : 0;
+    newState.data.systems = results.systems ? results.systems : 0;
     //set loaded
     newState.loaded = true;
     newState.data.loaded = true;
@@ -97,6 +98,10 @@ class EnvironmentCountWidget extends React.Component {
             <div className="col-xs-2 dashboard-widget-count count-rows">
               <span className="count-value">{countData.users}</span>
               <span className="count-label">{Morpheus.utils.message('gomorpheus.label.users')}</span>
+            </div>
+            <div className="col-xs-2 dashboard-widget-count count-rows">
+              <span className="count-value">{countData.systems}</span>
+              <span className="count-label">{Morpheus.utils.message('gomorpheus.label.systems')}</span>
             </div>
           </div>
         </div>
