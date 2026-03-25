@@ -69,6 +69,7 @@ class EnvironmentCountWidget extends React.Component {
     var isLoaded = this.state.data && this.state.data.loaded == true;
     var showChart = isLoaded == true && this.state.data.success == true;
     var countData = this.state.data ? this.state.data : {};
+    var showSystem = countData.systems > 0;
     //render
     return (
       <Widget>
@@ -99,10 +100,10 @@ class EnvironmentCountWidget extends React.Component {
               <span className="count-value">{countData.users}</span>
               <span className="count-label">{Morpheus.utils.message('gomorpheus.label.users')}</span>
             </div>
-            <div className="col-xs-2 dashboard-widget-count count-rows">
+            {showSystem ? <div className="col-xs-2 dashboard-widget-count count-rows">
               <span className="count-value">{countData.systems}</span>
               <span className="count-label">{Morpheus.utils.message('gomorpheus.label.systems')}</span>
-            </div>
+            </div> : ''}
           </div>
         </div>
         <EmptyWidget isEmpty={isLoaded == true && showChart != true}/>
