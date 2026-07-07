@@ -5,8 +5,8 @@ This plugin provides the default set of dashboards for [Morpheus](https://morphe
 ## Requirements
 
 | Component | Minimum Version |
-|-----------|----------------|
-| Morpheus | 8.1.0 |
+|-----------|-----------------|
+| Morpheus | 9.0.0           |
 
 ## Installation
 
