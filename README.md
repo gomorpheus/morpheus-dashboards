@@ -1,40 +1,77 @@
-# Morpheus Dashboard Plugins
+# Morpheus Standard Dashboard Plugin
 
-This project contains plugins for custom dashboards in the MorpheusData Appliance UI.
+This plugin provides the default set of dashboards for [Morpheus](https://morpheusdata.com). It enables standard home dashboards, cloud dashboards, cluster dashboards, activity widgets, workload widgets, task widgets, health widgets, backup widgets, and log widgets from within the Morpheus platform.
 
-### Building
+## Requirements
 
-This is a Morpheus plugin that leverages the `morpheus-plugin-core` which can be referenced by visiting [https://developer.morpheusdata.com](https://developer.morpheusdata.com). It is a groovy plugin designed to be uploaded into a Morpheus environment via the `Administration -> Integrations -> Plugins` section. To build all projects in this repo from scratch simply run the shadowJar gradle task on java 17:
+| Component | Minimum Version |
+|-----------|----------------|
+| Morpheus | 8.1.0 |
+
+## Installation
+
+1. Download the latest `.jar` from the [Releases](https://github.com/HewlettPackard/morpheus-dashboards/releases) page, or [build it yourself](#building).
+2. In Morpheus, navigate to **Administration → Integrations → Plugins**.
+3. Click **Browse** and upload the `.jar` file.
+4. The **Morpheus Home Dashboard** dashboards and dashboard widgets will appear after the plugin loads.
+
+## Configuration
+
+No connection settings are required. Once the plugin loads, the standard dashboards and dashboard widgets are available in the Morpheus UI.
+
+## Features
+
+### Dashboard Providers
+The plugin registers the following dashboard providers:
+
+- **Default Home Dashboard** — standard home dashboard layout
+- **Default Cloud List Dashboard** — cloud-focused dashboard layout
+- **Default Cluster List Dashboard** — cluster-focused dashboard layout
+
+### Activity and User Widgets
+The following dashboard item providers are registered for activity and user context:
+
+- **Recent Activity** — recent Morpheus activity
+- **User Favorites** — user favorites widget
+
+### Workload, Cloud, and Group Widgets
+The following dashboard item providers summarize workload and cloud inventory:
+
+- **Instance Count** — total instance count
+- **Instance Count by Cloud** — instance count grouped by cloud
+- **Cloud Count by Type** — cloud count grouped by cloud type
+- **Cloud Workload Counts** — workload counts grouped by cloud
+- **Group Workload Counts** — workload counts grouped by group
+
+### Cluster Widgets
+The following dashboard item providers summarize cluster usage:
+
+- **Cluster Workload Counts** — workload counts grouped by cluster
+- **Cluster Type Counts** — cluster counts grouped by cluster type
+- **Cluster Capacity** — cluster capacity summary
+
+### Automation, Backup, Health, and Log Widgets
+The following dashboard item providers expose operational summaries:
+
+- **Job Execution Statistics** — job execution status counts
+- **Backup Statistics** — backup status counts
+- **Task Executions Over Time** — task execution trend widget
+- **Workflow Executions Over Time** — workflow execution trend widget
+- **Task Failures** — recent task failure summary
+- **Task Execution Statistics** — task execution status counts
+- **Current Alarms** — active alarm summary
+- **Environment Count** — environment count summary
+- **Current Health** — current Morpheus health summary
+- **Log Count** — log count summary
+
+## Building
 
 ```bash
-gradlew shadowJar
+./gradlew morpheus-home-dashboard-plugin:shadowJar
 ```
 
-A jar will be produced in the `build/lib` folder that can be uploaded into a Morpheus environment.
+The plugin JAR will be written to `morpheus-home-dashboard-plugin/build/libs/`.
 
-To build individual projects use a scoped build command:
+## License
 
-```bash
-gradlew <project-name>:shadowJar
-```
-
-For example, to build the `morpheus-home-dashboard` plugin:
-
-```bash
-gradlew morpheus-home-dashboard:shadowJar
-```
-
-
-# Morpheus Standard Dashboards
-
-This plugin provides a set of standard dashboards for the Morpheus UI.
-
-## Installing
-
-First check to make sure the version of Morpheus installed is above or equal to the minimum required version of this plugin and then download the plugin file above.
-Once the file is downloaded, browse to the Administration -> Integrations -> Plugins section of the Morpheus appliance. Click the Upload File button to select your plugin and upload it.
-The plugin should now be loaded into the environment for use.
-
-## Configuring
-
-There are no configurations for this plugin. Once the plugin is loaded in the environment, the standard dashboards will be available in the Morpheus UI.
+Copyright 2024 Morpheus Data, LLC. Licensed under the [Apache License, Version 2.0](LICENSE).
