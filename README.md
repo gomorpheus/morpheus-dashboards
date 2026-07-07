@@ -1,6 +1,6 @@
 # Morpheus Standard Dashboard Plugin
 
-This plugin provides dashboard integration between [Morpheus Standard Dashboard](https://morpheusdata.com) and [Morpheus](https://morpheusdata.com). It enables standard home dashboards, cloud dashboards, cluster dashboards, activity widgets, workload widgets, task widgets, health widgets, backup widgets, and log widgets from within the Morpheus platform.
+This plugin provides the default set of dashboards for [Morpheus](https://morpheusdata.com). It enables standard home dashboards, cloud dashboards, cluster dashboards, activity widgets, workload widgets, task widgets, health widgets, backup widgets, and log widgets from within the Morpheus platform.
 
 ## Requirements
 
